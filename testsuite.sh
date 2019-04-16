@@ -11,13 +11,13 @@ set -e
 ## Sanity check
 # The environment should already contain necessary 'base' packages
 # for ansible, beakerlib, and standard test roles
-REQUIRED_BINARIES=(ansible str-filter-path)
+REQUIRED_BINARIES=(ansible str-filter-tests)
 REQUIRED_PATHS=(
     "/usr/share/beakerlib/beakerlib.sh"
 )
 
 for binary in "${REQUIRED_BINARIES[@]}"; do
-    if ! command -v binary > /dev/null; then
+    if ! command -v "$binary" > /dev/null; then
         echo >&2 "Missing required binary: '$binary'"
         exit 1
     fi
