@@ -1,4 +1,4 @@
 description: Check functionality of journalctl utility
-tags: [sanity]
+tags: [sanity, disabled]
 relevancy: |
     distro > rhel-7: True
