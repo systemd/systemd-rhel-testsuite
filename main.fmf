@@ -1,0 +1,3 @@
+contact: Frantisek Sumsal <fsumsal@redhat.com>
+component: systemd
+test: ./runtest.sh
