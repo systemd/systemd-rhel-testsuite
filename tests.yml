@@ -1,9 +1,9 @@
 ---
 - hosts: localhost
   vars:
-    # Run all tests by default
+    # Run all enabled tests by default
     # Can be overridden by ansible-playbook -e "fmf_filter='tags: ...'"
-    fmf_filter: "tags: .*"
+    fmf_filter: "tags: -disabled"
   tags:
     - classic
   roles:

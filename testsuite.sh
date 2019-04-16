@@ -1,9 +1,10 @@
 #!/bin/bash
 # Run the downstream RHEL testsuite using the standard test roles framework (STR).
-# Without arguments all tests recognized by FMF (Flexible Metadata Format)
+# Without arguments all *enabled* tests recognized by FMF (Flexible Metadata Format)
 # will be executed, i.e. all tests which have the main.fmf metadata file in
-# their directory. If an argument is specified, it is passed to the STR as
-# a FMF filter to specify a subset of tests from the testsuite.
+# their directory and don't have the 'disabled' tag set. If an argument
+# is specified, it is passed to the STR as a FMF filter to specify a subset
+# of tests from the testsuite.
 # FIXME: better documentation
 
 set -e
