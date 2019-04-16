@@ -37,7 +37,7 @@ ANSIBLE_ARGS=(--extra-vars=beakerlib_libraries_path="$BEAKERLIB_LIBRARY_PATH")
 TEST_ARTIFACTS="${TEST_ARTIFACTS:-$PWD/artifacts-$(date --iso=minutes)}"
 
 if [[ -n $1 ]]; then
-    ANSIBLE_ARGS+=("--extra-vars=\"fmf_filter='$1'\"")
+    ANSIBLE_ARGS+=(--extra-vars="fmf_filter='$1'")
 fi
 
 # Cleanup artifact directories, so we get the most relevant test results
